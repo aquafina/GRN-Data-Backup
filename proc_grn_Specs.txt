@@ -1,0 +1,7 @@
+CREATE OR REPLACE PACKAGE APPS.PROC_GRN AS
+            PROCEDURE SET_BPM_READY_FLAG (RSH_ID VARCHAR2);
+            PROCEDURE PRINT(TEXT VARCHAR2);
+            PROCEDURE SAVE_LOG(SID VARCHAR2,TEXT VARCHAR2);
+            function getFlag (lineid varchar2) return varchar2;
+            PROCEDURE raise_business_event(shipment_header_id varchar2);
+          END PROC_GRN;
